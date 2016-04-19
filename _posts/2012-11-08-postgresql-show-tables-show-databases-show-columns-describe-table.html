@@ -1,0 +1,25 @@
+---
+layout: post
+title: 'Postgresql: show tables, show databases, show columns, describe table'
+date: 2012-11-08 19:52:33.000000000 +00:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- PostgrreSQL
+meta:
+  _publicize_pending: '1'
+  _oembed_6d7ff86f986a3f71fe55792ec02d6433: '{{unknown}}'
+author:
+  login: siemic
+  email:
+  display_name: siemic
+  first_name: ''
+  last_name: ''
+---
+<p>mysql: <strong><code>SHOW TABLES</code></strong><br />postgresql: <strong><code>\d</code></strong><br />postgresql: <code>SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';</code></p>
+<p>mysql: <code><strong>SHOW DATABASES</strong></code><br />postgresql: <strong><code>\l</code></strong><br />postgresql: <code>SELECT datname FROM pg_database;</code></p>
+<p>mysql: <strong><code>SHOW COLUMNS</code></strong><br />postgresql: <strong><code>\d</code></strong> <strong>table</strong><br />postgresql: <code>SELECT column_name FROM information_schema.columns WHERE table_name ='<em>table</em>';</code></p>
+<p>mysql: <strong><code>DESCRIBE TABLE</code></strong><br />postgresql: <strong><code>\d+</code></strong> <strong>table</strong><br />postgresql: <code>SELECT column_name FROM information_schema.columns WHERE table_name ='<em>table</em>'</code></p>
+<p>[source][/source]<a href="http://www.linuxscrew.com/2009/07/03/postgresql-show-tables-show-databases-show-columns/">http://www.linuxscrew.com/2009/07/03/postgresql-show-tables-show-databases-show-columns/</a></p>

@@ -1,0 +1,155 @@
+[
+  
+    {
+      "title"    : "Welcome to Jekyll!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jekyll/update/2016/04/04/welcome-to-jekyll.html",
+      "date"     : "2016-04-04 21:09:24 +0100"
+    } ,
+  
+    {
+      "title"    : "Python requests - HTTP library. Examples",
+      "category" : "",
+      "tags"     : "Python",
+      "url"      : "/coding/2016/03/21/python-requests-http-library-examples.html",
+      "date"     : "2016-03-21 16:17:04 +0000"
+    } ,
+  
+    {
+      "title"    : "Jmeter - If controller example",
+      "category" : "",
+      "tags"     : "Jmeter",
+      "url"      : "/test%20automation%20tools/2016/03/14/jmeter-if-controller-example.html",
+      "date"     : "2016-03-14 12:26:04 +0000"
+    } ,
+  
+    {
+      "title"    : "Jmeter&#39;s Variables From CSV File - relative path",
+      "category" : "",
+      "tags"     : "Jmeter",
+      "url"      : "/test%20automation%20tools/2016/03/10/jmeters-variables-from-csv-file-relative-path.html",
+      "date"     : "2016-03-10 17:09:21 +0000"
+    } ,
+  
+    {
+      "title"    : "Use Jmeter&#39;s base directory",
+      "category" : "",
+      "tags"     : "Jmeter",
+      "url"      : "/test%20automation%20tools/2016/03/09/use-jmeters-base-directory.html",
+      "date"     : "2016-03-09 12:06:50 +0000"
+    } ,
+  
+    {
+      "title"    : "Unix quotes, regural expressions and sed",
+      "category" : "",
+      "tags"     : "Linux",
+      "url"      : "/environment/2015/04/03/unix-quotes-and-sed.html",
+      "date"     : "2015-04-03 14:08:51 +0100"
+    } ,
+  
+    {
+      "title"    : "How to mount Win partition on Ubuntu",
+      "category" : "",
+      "tags"     : "Ubuntu",
+      "url"      : "/2012/12/25/how-to-mount-win-partition-on-ubuntu.html",
+      "date"     : "2012-12-25 13:32:40 +0000"
+    } ,
+  
+    {
+      "title"    : "Presentation in HTML5",
+      "category" : "",
+      "tags"     : "html, presentation",
+      "url"      : "/2012/12/04/presentation-in-html5.html",
+      "date"     : "2012-12-04 12:47:15 +0000"
+    } ,
+  
+    {
+      "title"    : "Ubuntu Linux Start / Restart / Stop Apache Web Server",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/2012/11/20/ubuntu-linux-start-restart-stop-apache-web-server.html",
+      "date"     : "2012-11-20 19:58:48 +0000"
+    } ,
+  
+    {
+      "title"    : "How to check what libs are installed",
+      "category" : "",
+      "tags"     : "Ubuntu",
+      "url"      : "/2012/11/18/how-to-check-what-libs-are-installed.html",
+      "date"     : "2012-11-18 18:00:40 +0000"
+    } ,
+  
+    {
+      "title"    : "How to check if Postgres is running",
+      "category" : "",
+      "tags"     : "PostgreSQL",
+      "url"      : "/2012/11/18/how-to-check-if-postgres-is-running.html",
+      "date"     : "2012-11-18 17:06:27 +0000"
+    } ,
+  
+    {
+      "title"    : "Django - how to view executed queries",
+      "category" : "",
+      "tags"     : "Django, Python",
+      "url"      : "/2012/11/13/python-template-query-debug.html",
+      "date"     : "2012-11-13 21:37:48 +0000"
+    } ,
+  
+    {
+      "title"    : "",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/2012/11/13/26.html",
+      "date"     : "2012-11-13 13:19:02 +0000"
+    } ,
+  
+    {
+      "title"    : "Set up Django,Apache and PostgreSQL on Ubuntu",
+      "category" : "",
+      "tags"     : "Apache, Django, PostgreSQL, Ubuntu",
+      "url"      : "/2012/11/08/set-up-djangoapache-and-postgresql-on-ubuntu.html",
+      "date"     : "2012-11-08 20:08:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Postgresql: show tables, show databases, show columns, describe table",
+      "category" : "",
+      "tags"     : "PostgrreSQL",
+      "url"      : "/2012/11/08/postgresql-show-tables-show-databases-show-columns-describe-table.html",
+      "date"     : "2012-11-08 19:52:33 +0000"
+    } ,
+  
+    {
+      "title"    : "",
+      "category" : "",
+      "tags"     : "PostgreSQL, Ubuntu",
+      "url"      : "/2012/11/08/20.html",
+      "date"     : "2012-11-08 19:22:04 +0000"
+    } ,
+  
+    {
+      "title"    : "Git docs",
+      "category" : "",
+      "tags"     : "Git",
+      "url"      : "/2012/10/28/git-docs.html",
+      "date"     : "2012-10-28 08:18:02 +0000"
+    } ,
+  
+    {
+      "title"    : "OpenShift rhc console - basic commands",
+      "category" : "",
+      "tags"     : "OpenShift",
+      "url"      : "/2012/10/27/openshift-rhc-console-basic-commands.html",
+      "date"     : "2012-10-27 18:24:43 +0100"
+    } ,
+  
+    {
+      "title"    : "Starting with OpenShift",
+      "category" : "",
+      "tags"     : "OpenShift, Python",
+      "url"      : "/environment/2012/10/14/starting-with-openshift.html",
+      "date"     : "2012-10-14 14:46:29 +0100"
+    } 
+  
+]

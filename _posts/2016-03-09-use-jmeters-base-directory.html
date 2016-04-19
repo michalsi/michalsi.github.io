@@ -1,0 +1,51 @@
+---
+layout: post
+title: Use Jmeter's base directory
+date: 2016-03-09 12:06:50.000000000 +00:00
+type: post
+published: true
+status: publish
+categories:
+- Test Automation Tools
+tags:
+- Jmeter
+meta:
+  _rest_api_published: '1'
+  _rest_api_client_id: '-1'
+  _publicize_job_id: '20583917868'
+author:
+  login: siemic
+  email: 
+  display_name: siemic
+  first_name: ''
+  last_name: ''
+---
+<p>You can access these variables <a href="http://blazemeter.com/blog/queen-jmeters-built-componentshow-use-beanshell" rel="nofollow">using Beanshell</a> as follows:</p>
+<ol>
+<li>JMeter's base dir
+<pre><code>import org.apache.jmeter.services.FileServer;
+
+String baseDir = FileServer.getFileServer().getBaseDir();
+vars.put("baseDir", baseDir);
+</code></pre>
+</li>
+<li>JMeter's script location (GUI mode)
+<pre><code>import org.apache.jmeter.gui.GuiPackage;
+
+String testPlanFile = GuiPackage.getInstance().getTestPlanFile();
+vars.put("testPlanFile", testPlanFile);
+</code></pre>
+</li>
+<li>JMeter's script name (non-GUI mode)
+<pre><code>import org.apache.jmeter.services.FileServer;
+
+String scriptName = FileServer.getFileServer().getScriptName();
+vars.put("scriptName", scriptName); 
+</code></pre>
+</li>
+</ol>
+<p>If you prefer you can get the same using <a href="https://jmeter.apache.org/usermanual/functions.html#__BeanShell" rel="nofollow">__Beanshell()</a> function as</p>
+<pre><code>${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir())}
+</code></pre>
+<p>and it will return current base directory where it is called.</p>
+<p><em>source: <a href="http://stackoverflow.com/a/28110434/1037754">http://stackoverflow.com/a/28110434/1037754</a></em></p>

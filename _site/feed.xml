@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michal&#39;s notes</title>
+    <description>My privte public notes
+</description>
+    <lastBuildDate>Tue, 19 Apr 2016 22:14:14 +0100</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 19 Apr 2016 22:14:14 +0100</pubDate>
+    <lastBuildDate>Tue, 19 Apr 2016 22:14:14 +0100</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 04 Apr 2016 21:09:24 +0100</pubDate>
+        <link>/jekyll/update/2016/04/04/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">//jekyll/update/2016/04/04/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Python requests - HTTP library. Examples</title>
+        <description>&lt;p&gt;If you need to send some HTTP requests and that requires additional processing on your side maybe it&#39;d be better to draft some script. If you happen to know python then you can try its &lt;a href=&quot;http://docs.python-requests.org/en/master/&quot;&gt;Requests&lt;/a&gt; library. Some simple snippets that can be used are placed further.&lt;/p&gt;
+&lt;h3&gt;Set up a session&lt;/h3&gt;
+&lt;pre&gt;import requests
+from requests import Request, Session
+from requests.auth import HTTPBasicAuth
+
+s = requests.Session()&lt;/pre&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h3&gt;Send POST request:&lt;/h3&gt;
+&lt;pre&gt;registrationData = {&#39;registrationCode&#39; :registrationCode ,&#39;customerReference&#39;: customerRefNo}
+ registrationResp=s.post(host + &#39;/customer-account/register&#39;,headers = headers, data = registrationData)&lt;/pre&gt;
+&lt;p&gt;Just add required headers e.g&lt;/p&gt;
+&lt;pre&gt;headers = {
+ &#39;User-Agent&#39;: &#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36&#39;
+}&lt;/pre&gt;
+&lt;h3&gt;Send POST with json data&lt;/h3&gt;
+&lt;pre&gt;authorisationPayload = {&quot;personRoles&quot;:[{&quot;role&quot;:&quot;Owner&quot;,&quot;personId&quot;:userId}],
+ &quot;personPrivileges&quot;:[{&quot;privilegeNames&quot;:
+ [&quot;Full permissions&quot;,&quot;Amend &quot;,&quot;No access - cs&quot;,&quot;No access - cs agree&quot;],
+ &quot;personId&quot;:userId}]}&lt;/pre&gt;
+&lt;pre&gt;ra=s.post(host + &#39;/organisation/&#39; +str(businessID),headers = headers, json = authorisationPayload)&lt;/pre&gt;
+&lt;h3&gt;Dealing with &lt;b&gt;Cross-site request forgery&lt;/b&gt;&lt;/h3&gt;
+&lt;p&gt;If we have XSRF token added to requests we need to extract it.&lt;/p&gt;
+&lt;pre&gt;def getXsrf(cookies):
+    for cookie in s.cookies:
+       if cookie.name ==&#39;XSRF-TOKEN&#39;:
+          return cookie.value&lt;/pre&gt;
+&lt;p&gt;and add it to our headers&lt;/p&gt;
+&lt;pre&gt;xsrf = getXsrf(s.cookies)
+ headers[&#39;X-XSRF-TOKEN&#39;] = xsrf&lt;/pre&gt;
+&lt;h3&gt;
+Extract data from Json response:&lt;/h3&gt;
+&lt;pre&gt;
+ if ( ra.status_code == 200 ):
+   organisationID = ra.json()[&#39;_data&#39;][0][&#39;id&#39;] 
+
+&lt;/pre&gt;
+&lt;p&gt;In case of unverified HTTPS requests we can suppress warnings (if we really want it) :&lt;/p&gt;
+&lt;pre&gt;from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)&lt;/pre&gt;
+&lt;p&gt;We also probably need to add to our request this parameter  &lt;em&gt;verify=False&lt;/em&gt;&lt;em&gt;&lt;br /&gt;
+&lt;/em&gt;to skip verification of HTTPS certificate. Use it if needed of course.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Mar 2016 16:17:04 +0000</pubDate>
+        <link>/coding/2016/03/21/python-requests-http-library-examples.html</link>
+        <guid isPermaLink="true">//coding/2016/03/21/python-requests-http-library-examples.html</guid>
+        
+        <category>Python</category>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Jmeter - If controller example</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://jmeter.apache.org/usermanual/component_reference.html#If_Controller&quot;&gt;If controller &lt;/a&gt; example to control which request to send based on response of the other sampler.&lt;/p&gt;
+&lt;p&gt;We&#39;re using &lt;a href=&quot;http://jmeter-plugins.org/wiki/DummySampler/&quot;&gt;Dummy Sampler&lt;/a&gt; to generate requests.&lt;/p&gt;
+&lt;p&gt;We also need to extract response&#39;s code. We can use &lt;a href=&quot;http://jmeter.apache.org/usermanual/regular_expressions.html&quot;&gt;Regular Expression Extractor&lt;/a&gt; to get it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Field to check: Response Code&lt;/li&gt;
+&lt;li&gt;Reference Name: RESPONSE_CODE&lt;/li&gt;
+&lt;li&gt;Regular Expression: (\d+)&lt;/li&gt;
+&lt;li&gt;Template $1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First If Controller Condition&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;${RESPONSE_CODE}!=&quot;200&quot;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Second If Controller Condition&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt; ${RESPONSE_CODE}==&quot;200&quot;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Setup Dummy Sampler to return code 200.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-180&quot; src=&quot;//assets/dummy-sampler-200.png&quot; alt=&quot;Dummy Sampler - 200&quot; width=&quot;750&quot; height=&quot;356&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-157&quot; src=&quot;//assets/if-controller-yes-condition.png&quot; alt=&quot;if controller - yes condition&quot; width=&quot;636&quot; height=&quot;251&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;And now edit it to return something other than 200&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-181&quot; src=&quot;//assets/dummy-sampler-404.png&quot; alt=&quot;Dummy Sampler - 404&quot; width=&quot;741&quot; height=&quot;387&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-186&quot; src=&quot;//assets/if-controller-result.png&quot; alt=&quot;If Controller result&quot; width=&quot;598&quot; height=&quot;291&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Mar 2016 12:26:04 +0000</pubDate>
+        <link>/test%20automation%20tools/2016/03/14/jmeter-if-controller-example.html</link>
+        <guid isPermaLink="true">//test%20automation%20tools/2016/03/14/jmeter-if-controller-example.html</guid>
+        
+        <category>Jmeter</category>
+        
+        
+        <category>test automation tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Jmeter&#39;s Variables From CSV File - relative path</title>
+        <description>&lt;p&gt;Jmeters &lt;a href=&quot;http://jmeter-plugins.org/wiki/VariablesFromCSV/&quot;&gt;Variables From CSV File&lt;/a&gt; config element set its base directory as a user&#39;s home directory. If you &#39;Browse&#39; your file it will put something like:&lt;/p&gt;
+&lt;pre&gt;/Users/your_user/./your_file.txt&lt;/pre&gt;
+&lt;p&gt;So in such case we need to pass base directory to be able to work with relative paths for our files.&lt;/p&gt;
+&lt;h3&gt;1. Define base directory in User Defined Variables:&lt;/h3&gt;
+&lt;pre&gt;baseDir =&amp;gt;  ${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir())}&lt;/pre&gt;
+&lt;h3&gt;2. Use it in your element:&lt;/h3&gt;
+&lt;pre&gt;${baseDir}/../data/your_data.csv&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 10 Mar 2016 17:09:21 +0000</pubDate>
+        <link>/test%20automation%20tools/2016/03/10/jmeters-variables-from-csv-file-relative-path.html</link>
+        <guid isPermaLink="true">//test%20automation%20tools/2016/03/10/jmeters-variables-from-csv-file-relative-path.html</guid>
+        
+        <category>Jmeter</category>
+        
+        
+        <category>test automation tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Use Jmeter&#39;s base directory</title>
+        <description>&lt;p&gt;You can access these variables &lt;a href=&quot;http://blazemeter.com/blog/queen-jmeters-built-componentshow-use-beanshell&quot; rel=&quot;nofollow&quot;&gt;using Beanshell&lt;/a&gt; as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;JMeter&#39;s base dir
+&lt;pre&gt;&lt;code&gt;import org.apache.jmeter.services.FileServer;
+
+String baseDir = FileServer.getFileServer().getBaseDir();
+vars.put(&quot;baseDir&quot;, baseDir);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;JMeter&#39;s script location (GUI mode)
+&lt;pre&gt;&lt;code&gt;import org.apache.jmeter.gui.GuiPackage;
+
+String testPlanFile = GuiPackage.getInstance().getTestPlanFile();
+vars.put(&quot;testPlanFile&quot;, testPlanFile);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;JMeter&#39;s script name (non-GUI mode)
+&lt;pre&gt;&lt;code&gt;import org.apache.jmeter.services.FileServer;
+
+String scriptName = FileServer.getFileServer().getScriptName();
+vars.put(&quot;scriptName&quot;, scriptName); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you prefer you can get the same using &lt;a href=&quot;https://jmeter.apache.org/usermanual/functions.html#__BeanShell&quot; rel=&quot;nofollow&quot;&gt;__Beanshell()&lt;/a&gt; function as&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir())}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and it will return current base directory where it is called.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;source: &lt;a href=&quot;http://stackoverflow.com/a/28110434/1037754&quot;&gt;http://stackoverflow.com/a/28110434/1037754&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Mar 2016 12:06:50 +0000</pubDate>
+        <link>/test%20automation%20tools/2016/03/09/use-jmeters-base-directory.html</link>
+        <guid isPermaLink="true">//test%20automation%20tools/2016/03/09/use-jmeters-base-directory.html</guid>
+        
+        <category>Jmeter</category>
+        
+        
+        <category>test automation tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Unix quotes, regural expressions and sed</title>
+        <description>&lt;p&gt;Good tutorial for unix scripting&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UNIX SHELL Quote Tutorial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;http://www.grymoire.com/Unix/Quote.html&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regular Expressions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;http://www.grymoire.com/Unix/Regular.html&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sed - An Introduction and Tutorial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;http://www.grymoire.com/Unix/Sed.html&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Apr 2015 14:08:51 +0100</pubDate>
+        <link>/environment/2015/04/03/unix-quotes-and-sed.html</link>
+        <guid isPermaLink="true">//environment/2015/04/03/unix-quotes-and-sed.html</guid>
+        
+        <category>Linux</category>
+        
+        
+        <category>environment</category>
+        
+      </item>
+    
+      <item>
+        <title>How to mount Win partition on Ubuntu</title>
+        <description>&lt;p&gt;This guide has worked for me:&lt;/p&gt;
+&lt;p&gt;https://help.ubuntu.com/community/MountingWindowsPartitions&lt;/p&gt;
+&lt;p&gt;Particularly this section:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://help.ubuntu.com/community/MountingWindowsPartitions#Manual_Configuration&quot;&gt;https://help.ubuntu.com/community/MountingWindowsPartitions#Manual_Configuration&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Dec 2012 13:32:40 +0000</pubDate>
+        <link>/2012/12/25/how-to-mount-win-partition-on-ubuntu.html</link>
+        <guid isPermaLink="true">//2012/12/25/how-to-mount-win-partition-on-ubuntu.html</guid>
+        
+        <category>Ubuntu</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Presentation in HTML5</title>
+        <description>&lt;p&gt;Here&#39;s a link to a Ben Brton&#39;s github page where he has i.a. his presentation in HTML5&lt;/p&gt;
+&lt;p&gt;https://github.com/benburton/presentations&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Dec 2012 12:47:15 +0000</pubDate>
+        <link>/2012/12/04/presentation-in-html5.html</link>
+        <guid isPermaLink="true">//2012/12/04/presentation-in-html5.html</guid>
+        
+        <category>html</category>
+        
+        <category>presentation</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu Linux Start / Restart / Stop Apache Web Server</title>
+        <description>&lt;p&gt;/etc/init.d/apache2 is service script used to start / stop / restart the Apache2 service under Debian or Ubuntu Linux. You need to login as root or use sudo command restart Apache.&lt;/p&gt;
+&lt;h2&gt;Task: Start Apache 2 Server&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;# /etc/init.d/apache2 start&lt;/code&gt;&lt;br /&gt;
+or&lt;br /&gt;
+&lt;code&gt;$ sudo /etc/init.d/apache2 start&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Task: Restart Apache 2 Server&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;# /etc/init.d/apache2 restart&lt;/code&gt;&lt;br /&gt;
+or&lt;br /&gt;
+&lt;code&gt;$ sudo /etc/init.d/apache2 restart&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Task: Stop Apache 2 Server&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;# /etc/init.d/apache2 stop&lt;/code&gt;&lt;br /&gt;
+or&lt;br /&gt;
+&lt;code&gt;$ sudo /etc/init.d/apache2 stop&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;[source language=&quot;:&amp;lt;a&quot;][/source]&lt;/p&gt;
+&lt;p&gt;The usual location for Debian-like systems (ubuntu) is to place webfiles under the /var/www/... branch of dirs. That is also the location where apache would look (at least you find it in many example apache config files).&lt;br /&gt;
+So you could build dirs like that:&lt;/p&gt;
+&lt;p&gt;/var/www/example.com&lt;br /&gt;
+/var/www/sub1.example.com&lt;br /&gt;
+/var/www/sub2.example.com&lt;br /&gt;
+etc.&lt;/p&gt;
+&lt;p&gt;You may see such statement:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;„Could not reliably determine the server’s fully qualified domain name, using 127.0.1.1 for ServerName”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To fix that problem, you need to edit the httpd.conf file. Open the terminal and type,&lt;/p&gt;
+&lt;div&gt;
+&lt;div&gt;sudo gedit /etc/apache2/httpd.conf&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;By default httpd.conf file will be blank. Now, simply add the following line to the file.&lt;/p&gt;
+&lt;div&gt;
+&lt;div&gt;ServerName localhost&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Save the file and exit from gEdit. Finally restart the server.&lt;/p&gt;
+&lt;div&gt;
+&lt;div&gt;sudo /etc/init.d/apache2 restart&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 20 Nov 2012 19:58:48 +0000</pubDate>
+        <link>/2012/11/20/ubuntu-linux-start-restart-stop-apache-web-server.html</link>
+        <guid isPermaLink="true">//2012/11/20/ubuntu-linux-start-restart-stop-apache-web-server.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to check what libs are installed</title>
+        <description>&lt;p&gt;pip freeze&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Nov 2012 18:00:40 +0000</pubDate>
+        <link>/2012/11/18/how-to-check-what-libs-are-installed.html</link>
+        <guid isPermaLink="true">//2012/11/18/how-to-check-what-libs-are-installed.html</guid>
+        
+        <category>Ubuntu</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
