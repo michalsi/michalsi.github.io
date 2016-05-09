@@ -2,11 +2,13 @@
 layout: page
 title: About
 permalink: /about/
-icon: info_outline
+
 ---
+Hi, I'm Michal. I work as a Software Test Engineer. 888
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I write here about various things that I have worked on. 
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+This is primarily for me for the future as my memory is good - but short.
+Hopefully it will benefit other people as well.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Views presented here are my own.
