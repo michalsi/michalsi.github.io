@@ -55,7 +55,7 @@ WORKSPACE=`dirname $0`
 RESULTS=$WORKSPACE/../results
 ```
 
-$0 Expands to the name of the shell or shell script.  If Bash is invoked with a file of commands, $0 is set to the name of that file. 
+`$0` Expands to the name of the shell or shell script. If Bash is invoked with a file of commands, $0 is set to the name of that file. 
 
 ## Get specific files from directory
 
@@ -72,7 +72,7 @@ echo $FILES
 output: 
 `./page1.html ./page2.html ./page3.html`
 
-###Get number of found files 
+### Get number of found files 
 
 ```bash
 echo `find $FILES | wc -l`
@@ -87,13 +87,16 @@ We could also add additional arguments to the previous search to change director
 ```bash
 FILES_NAMES=`find $FILES | grep '[A-Za-z0-9]*\.html' -o | grep '[a-zA-Z0-9]*' -o`
 ```
+
 This can be used further to loop through all found files
+
 ```bash
 for file in $FILES_NAMES
 do
 	echo $file
 done
 ```
+
 ### Adding timestamp
 
 It could be convenient to add time stamps and some parameters to variables that we use when creating a files. 
@@ -125,3 +128,4 @@ result=$RESULTS/`basename $file .html`$timestamp.log
 echo "<html><head><title>Test results</title></head><body><h1>Tests results</h1>" > $RESULTS/results.html
 ```	
 `>>` will append to a file
+
