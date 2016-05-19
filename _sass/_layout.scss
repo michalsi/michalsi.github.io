@@ -179,6 +179,7 @@
 }
 
 
+
 // mdl menu hacks
 .mdl-menu__container {
   width: 240px;
@@ -261,5 +262,12 @@
 .mdl-layout__header-row {
   @include desktop {
     padding-left: 40px;
+    a {
+          color: #fff;
+          text-decoration: none;
+        }
+    a:hover{
+    text-decoration: underline;
+    }
   }
 }
