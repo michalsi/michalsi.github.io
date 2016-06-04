@@ -24,14 +24,15 @@ layout: default
           {% if categories_list.first[0] == null %}
             {% for category in categories_list %}
               <li>
-                <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category }}-ref">
+                <a href="{{ 'categories.html' | prepend: site.baseurl | prepend: site.url}}#{{ category | replace:' ','-' }}">
                   {{ category | join: "/" }}{% unless forloop.last %},{% endunless %}
                 </a>
               </li>
             {% endfor %}
           {% else %}
             {% for category in categories_list %}
-              <li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] }}-ref">
+              <li>
+               <a href="{{ 'categories.html' | prepend: site.baseurl | prepend: site.url}}#{{ category[0] | replace:' ','-' }}">
                 {{ category[0] | join: "/" }}
               </a></li>
             {% endfor %}
@@ -52,7 +53,7 @@ layout: default
         {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
           <li>
-            <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag }}-ref">
+            <a href="{{ 'tags.html' | prepend: site.baseurl | prepend: site.url}}#{{ tag | replace:' ','-' }}">
             {{ tag }}{% unless forloop.last %},{% endunless %}
             </a>
           </li>
@@ -60,7 +61,7 @@ layout: default
         {% else %}
         {% for tag in tags_list %}
           <li>
-            <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref">
+           <a href="{{ 'tags.html' | prepend: site.baseurl | prepend: site.url}}#{{ tag[0] | replace:' ','-' }}">
               {{ tag[0] }}{% unless forloop.last %},{% endunless %}
             </a>
           </li>
