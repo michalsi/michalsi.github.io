@@ -8,9 +8,9 @@ tags: jmeter test-rapport
 ## Description 
 This is a small script that runs jmeter with configured result parameters. It's part of our work that we've done around performance tests in one of the Kainos projects.
 
-:star: Big kudos should go to the guys with whom I worked there! :star: 
+Big kudos should go to the guys with whom I worked there!
 
-###Features
+### 	Features
 + Automatically detects tests plans that are placed in `tests` directory and run all of them.
 + Uses tools shipped with Jmeter (**CMDRunner** and **Xalan**) to parse results, prepare them in tabular form and generate graphs.
 + Different types of reports can be added, removed and configured in the script.
