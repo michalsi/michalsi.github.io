@@ -14,9 +14,10 @@ layout: default
           {% when 3 or 23 %}{{ d }}rd,
           {% else %}{{ d }}th,
           {% endcase %}
-          {{ post.date | date: "%Y" }}
+          {{ post.date | date: "%Y" }}          
         </h5>
         <h1>{{ post.title }}</h1>
+        <hr>
       </div>
       {{ post.content | truncatewords:75}}
       <a class="mdl-button mdl-button--accent" href="{{ post.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">Read more</a>
