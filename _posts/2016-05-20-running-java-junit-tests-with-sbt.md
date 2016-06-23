@@ -2,7 +2,7 @@
 layout: post
 title:  "Running Java JUnit tests with SBT"
 date:   2016-05-20 21:09:24 +0100
-categories: test-automation
+categories: coding
 tags: sbt junit
 ---
 This is sample configuration to run JUnit tests with [SBT](http://www.scala-sbt.org/)
