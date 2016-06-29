@@ -5,6 +5,8 @@ date:   2016-06-23 21:09:24 +0100
 categories: serenity-bdd
 tags: junit sauce-labs
 ---
+## Problem
+
 After hearing about [Serenity BDD](http://serenity-bdd.info/#/) and doing some simple tutorials I decided to evaluate it within my current project. 
 
 It certainly has lots of nice features and personally I like the idea of  [Screenplay Pattern](https://www.infoq.com/articles/Beyond-Page-Objects-Test-Automation-Serenity-Screenplay) but because of its relatively not widely common adoption the documentation and community support is still not huge. So before introducing it to our project I wanted to evaluate it with  our basic scenario integrated with the CI environment. 
@@ -28,13 +30,13 @@ Example of cofiguration for _latest_ version of firefox run on Vista machine on 
 	  timeouts.implicitlywait = 10000
 	}
 	saucelabs {
-	  url="http://<user id>:<access key>.saucelabs.com:80/wd/hub"
+	  user.id = <your value>
+	  access.key = <your value>
+	  url="http://"${saucelabs.user.id}":"${saucelabs.access.key}"@ondemand.saucelabs.com:80/wd/hub"
 	  target.platform=vista
 	  driver.version=latest
 	  test.name = acceptance-tests
-	  user.id = <user id>
-	  access.key = <access key>
-	}
+}
 
 This is enough to run test on Sauce Labs under _acceptance-tests_ name
 
