@@ -5,7 +5,6 @@ date:   2016-06-23 21:09:24 +0100
 categories: serenity-bdd
 tags: junit sauce-labs
 ---
-## Problem
 
 After hearing about [Serenity BDD](http://serenity-bdd.info/#/) and doing some simple tutorials I decided to evaluate it within my current project. 
 
