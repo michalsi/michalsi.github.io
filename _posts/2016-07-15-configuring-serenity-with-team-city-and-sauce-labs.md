@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Configuring Serenity with Team City and Sauce Labs"
-date:   2016-07-15 21:09:24 +0100
+date:   2016-07-10 21:09:24 +0100
 categories: serenity-bdd
 tags: sauce-labs team-city
 ---
