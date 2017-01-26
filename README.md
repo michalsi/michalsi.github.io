@@ -2,4 +2,4 @@
 
 [http://michalsi.github.io/](http://michalsi.github.io/)
 
-Here I capture stuff that I want to save and share.
+Here I keep some stuff that I have been working on.
