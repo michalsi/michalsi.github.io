@@ -25,14 +25,14 @@ From Team City we need to do that change in some other way.
 
 I can see 2 options:
 
-a. Prepare number of files with different configuration and replace main config file with selected one
-b. Edit main config file. 
+  * a. Prepare number of files with different configuration and replace main config file with selected one
+  * b. Edit main config file. 
 
 Option _a_ would suit my second requirement. We could prepare different builds e.g. to run Firefox with Windows, Chrome with Mac etc. Before executing tests we can simply replace standard Serenity.conf file with the one which has defined desirable properties .
 
 Option _b_ would be good for first requirement. We just need to have separate mechanism to pass configuration set by user in Team City and change corresponding entries in Serenity.conf.
 
-Let assume such configuration in Serenity.conf:
+Let assume such configuration in *Serenity.conf*:
 
     webdriver {
         driver = chrome
@@ -138,6 +138,5 @@ As additional information following platforms were troublesome for me when execu
 
  - SNOW_LEOPARD, MOUNTAIN_LION
 For those Sauce Labs returned errors when trying to spin up Chrome browser.
-
 - UNIX is the same as LINUX
 - ANY is not supported by Sauce Labs

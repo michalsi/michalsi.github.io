@@ -44,6 +44,12 @@ And now edit it to return something other than 200
 ![alt text]({{ site.url }}/assets/if-controller-result.png "If Controller result")
 
 
+## Comparing variables 
+
+In case you want to compare string variables you need to enclose them in quotes
+
+	"${my_variable}"=="foo"
+
  
 
 
