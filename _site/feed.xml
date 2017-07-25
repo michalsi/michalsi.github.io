@@ -1,95 +1,517 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Michal&#39;s notes</title>
-    <description>My privte public notes
+    <title>My private public notes</title>
+    <description>Notes on software engineering including testing tools and frameworks, code snippets and other stuff
 </description>
-    <lastBuildDate>Tue, 19 Apr 2016 22:14:14 +0100</lastBuildDate>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Apr 2016 22:14:14 +0100</pubDate>
-    <lastBuildDate>Tue, 19 Apr 2016 22:14:14 +0100</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://michalsi.github.io/</link>
+    <atom:link href="http://michalsi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 Jul 2017 21:06:07 +0100</pubDate>
+    <lastBuildDate>Tue, 25 Jul 2017 21:06:07 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title> Working with Jekyll - switch to &#39;minima&#39; theme</title>
+        <description>&lt;p&gt;After a while of being busy with other stuff I wanted to get back to my notes kept on github pages. First thing I wanted to do was cleanup and fixes. I got advise from github about officially supported themes and the one which I used wasn’t on that list.
+I decided to look for something new.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;basic-commands&quot;&gt;Basic commands&lt;/h2&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;After a while I’ve forgot the ‘working flow’ with Jekyll so it means that I should write it down here.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;##Start a new blog.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new michalsi.github.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
+&lt;p&gt;It will have default &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt; theme installed. It suited well my most needs for clean and clear theme. With &lt;em&gt;just a few tweaks&lt;/em&gt; it should preserve all of my blog’s functionalities and give it a fresh look.&lt;/p&gt;
+
+&lt;h2 id=&quot;run-jekyll-server&quot;&gt;Run Jekyll server&lt;/h2&gt;
+&lt;p&gt;This command will watch for changes automatically.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Same as &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; but will detach from the current terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve --detach
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;theme-customisation&quot;&gt;Theme customisation&lt;/h2&gt;
+
+&lt;h3 id=&quot;categories&quot;&gt;Categories&lt;/h3&gt;
+
+&lt;p&gt;To add categories and tags pages we need to include following liquid code&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;site.categories&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cat[0]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endfor&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;pagination&quot;&gt;Pagination&lt;/h3&gt;
+
+&lt;p&gt;To limit lists of posts displayed at the same time on the main page we need to add pagination.&lt;/p&gt;
+
+&lt;p&gt;Add into &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gems: [jekyll-paginate]
+
+paginate: 5
+paginate_path: &quot;/page-:num/&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Basic pagination for your page is explained &lt;a href=&quot;https://jekyllrb.com/docs/pagination/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 04 Apr 2016 21:09:24 +0100</pubDate>
-        <link>/jekyll/update/2016/04/04/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">//jekyll/update/2016/04/04/welcome-to-jekyll.html</guid>
-        
+        <pubDate>Wed, 19 Jul 2017 19:37:59 +0100</pubDate>
+        <link>http://michalsi.github.io/blog/2017/07/19/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/blog/2017/07/19/welcome-to-jekyll.html</guid>
         
         <category>jekyll</category>
         
-        <category>update</category>
+        
+        <category>blog</category>
         
       </item>
     
       <item>
-        <title>Python requests - HTTP library. Examples</title>
-        <description>&lt;p&gt;If you need to send some HTTP requests and that requires additional processing on your side maybe it&#39;d be better to draft some script. If you happen to know python then you can try its &lt;a href=&quot;http://docs.python-requests.org/en/master/&quot;&gt;Requests&lt;/a&gt; library. Some simple snippets that can be used are placed further.&lt;/p&gt;
-&lt;h3&gt;Set up a session&lt;/h3&gt;
-&lt;pre&gt;import requests
-from requests import Request, Session
-from requests.auth import HTTPBasicAuth
+        <title>Configuring Serenity with Team City and Sauce Labs</title>
+        <description>&lt;p&gt;When working with atomated test we most likely would like to hook them up into some Continuous Integration environment.&lt;/p&gt;
 
-s = requests.Session()&lt;/pre&gt;
-&lt;h4&gt;&lt;/h4&gt;
-&lt;h3&gt;&lt;/h3&gt;
-&lt;h3&gt;Send POST request:&lt;/h3&gt;
-&lt;pre&gt;registrationData = {&#39;registrationCode&#39; :registrationCode ,&#39;customerReference&#39;: customerRefNo}
- registrationResp=s.post(host + &#39;/customer-account/register&#39;,headers = headers, data = registrationData)&lt;/pre&gt;
-&lt;p&gt;Just add required headers e.g&lt;/p&gt;
-&lt;pre&gt;headers = {
- &#39;User-Agent&#39;: &#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36&#39;
-}&lt;/pre&gt;
-&lt;h3&gt;Send POST with json data&lt;/h3&gt;
-&lt;pre&gt;authorisationPayload = {&quot;personRoles&quot;:[{&quot;role&quot;:&quot;Owner&quot;,&quot;personId&quot;:userId}],
- &quot;personPrivileges&quot;:[{&quot;privilegeNames&quot;:
- [&quot;Full permissions&quot;,&quot;Amend &quot;,&quot;No access - cs&quot;,&quot;No access - cs agree&quot;],
- &quot;personId&quot;:userId}]}&lt;/pre&gt;
-&lt;pre&gt;ra=s.post(host + &#39;/organisation/&#39; +str(businessID),headers = headers, json = authorisationPayload)&lt;/pre&gt;
-&lt;h3&gt;Dealing with &lt;b&gt;Cross-site request forgery&lt;/b&gt;&lt;/h3&gt;
-&lt;p&gt;If we have XSRF token added to requests we need to extract it.&lt;/p&gt;
-&lt;pre&gt;def getXsrf(cookies):
-    for cookie in s.cookies:
-       if cookie.name ==&#39;XSRF-TOKEN&#39;:
-          return cookie.value&lt;/pre&gt;
-&lt;p&gt;and add it to our headers&lt;/p&gt;
-&lt;pre&gt;xsrf = getXsrf(s.cookies)
- headers[&#39;X-XSRF-TOKEN&#39;] = xsrf&lt;/pre&gt;
-&lt;h3&gt;
-Extract data from Json response:&lt;/h3&gt;
-&lt;pre&gt;
- if ( ra.status_code == 200 ):
-   organisationID = ra.json()[&#39;_data&#39;][0][&#39;id&#39;] 
+&lt;p&gt;Recently I wanted to integrate &lt;a href=&quot;http://serenity-bdd.info/#/&quot;&gt;Serenity&lt;/a&gt; tests into Team City server and run them on &lt;a href=&quot;https://saucelabs.com/platforms/&quot;&gt;Sauce Labs&lt;/a&gt;.&lt;/p&gt;
 
-&lt;/pre&gt;
-&lt;p&gt;In case of unverified HTTPS requests we can suppress warnings (if we really want it) :&lt;/p&gt;
-&lt;pre&gt;from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)&lt;/pre&gt;
-&lt;p&gt;We also probably need to add to our request this parameter  &lt;em&gt;verify=False&lt;/em&gt;&lt;em&gt;&lt;br /&gt;
-&lt;/em&gt;to skip verification of HTTPS certificate. Use it if needed of course.&lt;/p&gt;
+&lt;p&gt;My main requirements were:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Tests execution on demand from Team City&lt;/li&gt;
+  &lt;li&gt;Tests execution as an automatic step of build&lt;/li&gt;
+  &lt;li&gt;Possibility to chose driver, driver version and platform to use on Sauce Labs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Points 1 and 2 have been fulfilled mostly by creating and configuring a standard &lt;a href=&quot;https://confluence.jetbrains.com/display/TCD9/Creating+and+Editing+Build+Configurations&quot;&gt;build step&lt;/a&gt; in Team City.&lt;/p&gt;
+
+&lt;p&gt;As for point 3 we need to tell Serenity what configuration it should use. This is set in &lt;code class=&quot;highlighter-rouge&quot;&gt;serenity.conf&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;When executing tests locally any changes needed are easy to make - just edit conf file.
+From Team City we need to do that change in some other way.&lt;/p&gt;
+
+&lt;p&gt;I can see 2 options:&lt;/p&gt;
+
+&lt;p&gt;a. Prepare number of files with different configuration and replace main config file with selected one
+b. Edit main config file.&lt;/p&gt;
+
+&lt;p&gt;Option &lt;em&gt;a&lt;/em&gt; would suit my second requirement. We could prepare different builds e.g. to run Firefox with Windows, Chrome with Mac etc. Before executing tests we can simply replace standard Serenity.conf file with the one which has defined desirable properties .&lt;/p&gt;
+
+&lt;p&gt;Option &lt;em&gt;b&lt;/em&gt; would be good for first requirement. We just need to have separate mechanism to pass configuration set by user in Team City and change corresponding entries in Serenity.conf.&lt;/p&gt;
+
+&lt;p&gt;Let assume such configuration in Serenity.conf:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;webdriver {
+    driver = chrome
+}
+
+saucelabs {
+    target.platform = WIN10
+    driver.version = latest 
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;passing-configuration-variables-from-team-city&quot;&gt;Passing configuration variables from Team City&lt;/h2&gt;
+
+&lt;p&gt;One of the option is to use environment variables. User sets such variable as parameter for executed build.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://michalsi.github.io/assets/posts/team-city-env-variables.png&quot; alt=&quot;team city env variables&quot; title=&quot;team city env variables&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Example of parameters configuration;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://michalsi.github.io/assets/posts/tc-edit-parameter.png&quot; alt=&quot;tc-edit-parameter&quot; title=&quot;tc-edit-parameter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I don’t want to put any logic behind setting environment variables i.e. limiting not possible configuration. I leave it to the user and his common sense ;)&lt;/p&gt;
+
+&lt;p&gt;The current list of possible configuration is available &lt;a href=&quot;https://saucelabs.com/platforms/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;changing-config-file&quot;&gt;Changing config file&lt;/h2&gt;
+
+&lt;p&gt;Now we can read environment variable and change corresponding entry in serenity.conf.&lt;/p&gt;
+
+&lt;p&gt;My first attempt was to use &lt;a href=&quot;http://michalsi.github.io/linux/2015/04/03/unix-quotes-and-sed.html&quot;&gt;sed&lt;/a&gt; with sh script. But decided to abandon this idea in favour of better maintainability of python script (at leas from my perspective).&lt;/p&gt;
+
+&lt;p&gt;So my script has list of properties to change.
+Reads values from environment variables and replace corresponding lines in serenity.conf file accordingly.&lt;/p&gt;
+
+&lt;p&gt;Simple implementation to modify target.platform, driver, driver.version&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /usr/bin/env python&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+Scritp to modify serenity.conf file.
+It updates given key - value pairs
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tempfile&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mkstemp&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shutil&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;original_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;./src/test/resources/serenity.conf&#39;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;is_pattern_found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;regex_pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;r&#39;^&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;escape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;r&#39;=&#39;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;striped_line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regex_pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;striped_line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;M&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#Create temp file&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abs_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mkstemp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abs_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;w&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;original_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;old_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;old_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;c&quot;&gt;# skip comment lines&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;//&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;#&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;new_file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_pattern_found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;new_file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39; = &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;Modified property: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39; with value: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;subst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;new_file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#Remove original file&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;original_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#Move new file&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abs_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;original_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify_serentiy_conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;Taken property: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;property&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;os_env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;environ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;KeyError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;KeyError exception returned - reason &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os_env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;serenity_prop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;Serentiy property: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serenity_prop&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serenity_prop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os_env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Target_Platform&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Driver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Driver_Version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;modify_serentiy_conf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;possible-platforms&quot;&gt;Possible platforms&lt;/h3&gt;
+
+&lt;p&gt;As additional information following platforms were troublesome for me when executing on Sauce Labs&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SNOW_LEOPARD, MOUNTAIN_LION
+For those Sauce Labs returned errors when trying to spin up Chrome browser.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;UNIX is the same as LINUX&lt;/li&gt;
+  &lt;li&gt;ANY is not supported by Sauce Labs&lt;/li&gt;
+&lt;/ul&gt;
 </description>
-        <pubDate>Mon, 21 Mar 2016 16:17:04 +0000</pubDate>
-        <link>/coding/2016/03/21/python-requests-http-library-examples.html</link>
-        <guid isPermaLink="true">//coding/2016/03/21/python-requests-http-library-examples.html</guid>
+        <pubDate>Sun, 10 Jul 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/serenity-bdd/2016/07/10/configuring-serenity-with-team-city-and-sauce-labs.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/serenity-bdd/2016/07/10/configuring-serenity-with-team-city-and-sauce-labs.html</guid>
         
-        <category>Python</category>
+        <category>sauce-labs</category>
+        
+        <category>team-city</category>
+        
+        
+        <category>serenity-bdd</category>
+        
+      </item>
+    
+      <item>
+        <title>Serenity and SauceLabs integration with JUnit</title>
+        <description>&lt;p&gt;After hearing about &lt;a href=&quot;http://serenity-bdd.info/#/&quot;&gt;Serenity BDD&lt;/a&gt; and doing some simple tutorials I decided to evaluate it within my current project.&lt;/p&gt;
+
+&lt;p&gt;It certainly has lots of nice features and personally I like the idea of  &lt;a href=&quot;https://www.infoq.com/articles/Beyond-Page-Objects-Test-Automation-Serenity-Screenplay&quot;&gt;Screenplay Pattern&lt;/a&gt; but because of its relatively not widely common adoption the documentation and community support is still not huge. So before introducing it into our project I wanted to evaluate it with our basic scenario integrated with the CI environment.&lt;/p&gt;
+
+&lt;p&gt;One of our features that need to be supported is execution tests on &lt;a href=&quot;https://saucelabs.com/&quot;&gt;Sauce Labs&lt;/a&gt;.
+Fortunately Serenity supports it along with &lt;a href=&quot;https://www.browserstack.com/&quot;&gt;BrowserStack&lt;/a&gt;. After looking into &lt;a href=&quot;http://www.thucydides.info/docs/serenity/&quot;&gt;documentation&lt;/a&gt; I had working tests executed on Sauce Labs but the problem was that Sauce Labs wasn’t showing me results and names of the tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://michalsi.github.io/assets/posts/SL-unnamed-no-status-test.png&quot; alt=&quot;Unnamed and without status test result on SL&quot; title=&quot;Unnamed and without status test result on SL&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-configuration&quot;&gt;Basic configuration&lt;/h3&gt;
+
+&lt;p&gt;Serenity can be configured with single configuration file:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src/test/resources/serenity.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Part of configuration for &lt;em&gt;latest&lt;/em&gt; version of Firefox  and Vista machine on Sauce Labs&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;webdriver {
+  driver = firefox
+  timeouts.implicitlywait = 10000
+}
+saucelabs {
+  user.id = &amp;lt;your value&amp;gt;
+  access.key = &amp;lt;your value&amp;gt;
+  url=&quot;http://&quot;${saucelabs.user.id}&quot;:&quot;${saucelabs.access.key}&quot;@ondemand.saucelabs.com:80/wd/hub&quot;
+  target.platform=vista
+  driver.version=latest
+  test.name = acceptance-tests
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is enough to run tests on Sauce Labs and display them with &lt;em&gt;acceptance-tests&lt;/em&gt; name&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://michalsi.github.io/assets/posts/SL-running-test.png&quot; alt=&quot;Running tests on Sauce Labs&quot; title=&quot;Running tests on Sauce Labs&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;informing-sauce-labs-about-test-result&quot;&gt;Informing Sauce Labs about test result&lt;/h2&gt;
+
+&lt;p&gt;Sauce Labs &lt;em&gt;doesn’t know&lt;/em&gt; what are our assertions in tests so we need to pass information about test result &lt;a href=&quot;https://wiki.saucelabs.com/display/DOCS/Annotating+Tests+with+the+Sauce+Labs+REST+API&quot;&gt;separately&lt;/a&gt;.
+With &lt;a href=&quot;https://github.com/saucelabs/saucerest-java&quot;&gt;SauceRest client&lt;/a&gt; that is fairly easy and you just need to capture test result from test runner. 
+I used to work with TestNG where obtaining tests result was simple:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@AfterMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alwaysRun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;writeResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ITestResult&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//process result&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;JUnit doesn’t provide such mechanism. But we can use &lt;a href=&quot;https://github.com/junit-team/junit4/wiki/Rules&quot;&gt;Rules&lt;/a&gt; instead.&lt;/p&gt;
+
+&lt;p&gt;Before implementing it we need to be able to gather &lt;strong&gt;current session ID&lt;/strong&gt; which will be used to distinguish our test on Sauce Labs platform.&lt;/p&gt;
+
+&lt;p&gt;We can use Serenity’s static method.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Serenity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCurrentSessionID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;passing-test-name-to-sauce-labs&quot;&gt;Passing test name to Sauce Labs&lt;/h3&gt;
+
+&lt;p&gt;Another thing I require is to display on Sauce Labs dashbord name of test case executed – its method’s name. Not general one defined in Serenity.conf. I saw in the Serenity code that is should be done automatically but it didn’t work for me. So I decided to do something about it.&lt;/p&gt;
+
+&lt;p&gt;With JUnit we can again use &lt;em&gt;Rules&lt;/em&gt; where we can get current test name from description object.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;description.getMethodName();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Additionally we capitalise first letter of test name extracted and remove underscores that are used for readability.&lt;/p&gt;
+
+&lt;h3 id=&quot;rule-to-update-sauce-labs-jobs-status-and-test-name&quot;&gt;Rule to update Sauce Labs jobs status and test name&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SauceLabsWatcher&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TestWatcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sauceLabsOn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SauceREST&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;succeeded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Description&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sauceLabsOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jobPassed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Serenity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCurrentSessionID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;failed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Throwable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Description&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sauceLabsOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jobFailed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Serenity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCurrentSessionID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Description&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sauceLabsOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;updateSauceLabsTestName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateSauceLabsTestName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Description&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sauceJob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HashMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sauceJob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prepareTestName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;updateJobInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Serenity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCurrentSessionID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sauceJob&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prepareTestName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Description&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;methodName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMethodName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;methodName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;methodName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;starting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Description&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;starting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;initialiseSauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initialiseSauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;EnvironmentVariables&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Injectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInjector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+          &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isSauceLabsUrlProvided&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sauceLabsOn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;setupSauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setupSauceRestClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EnvironmentVariables&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSauceLabsUserFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSauceLabsKeyFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sauceRestClient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SauceREST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isSauceLabsUrlProvided&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EnvironmentVariables&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThucydidesSystemProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SAUCELABS_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isNotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSauceLabsKeyFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EnvironmentVariables&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThucydidesSystemProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SAUCELABS_ACCESS_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSauceLabsUserFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EnvironmentVariables&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadedEnvironmentVariables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ThucydidesSystemProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SAUCELABS_USER_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Having defined such Rule class we can use it in our tests simply by adding:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Rule&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SauceLabsWatcher&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sauceLabsWatcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SauceLabsWatcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finally we can observe clearly marked tests on Sauce Labs dashboard:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://michalsi.github.io/assets/posts/SL-passed-and-failed-test.png&quot; alt=&quot; Test results on Sauce Labs&quot; title=&quot;Test results on Sauce Labs&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jun 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/serenity-bdd/2016/06/23/serenity-and-saucelabs-integration-with-junit.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/serenity-bdd/2016/06/23/serenity-and-saucelabs-integration-with-junit.html</guid>
+        
+        <category>junit</category>
+        
+        <category>sauce-labs</category>
+        
+        
+        <category>serenity-bdd</category>
+        
+      </item>
+    
+      <item>
+        <title>Script to run Jmeter test plans and format HTML rapport</title>
+        <description>&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;This is a small script that runs jmeter with configured result parameters. It’s part of our work that we’ve done around performance tests in one of the Kainos projects.&lt;/p&gt;
+
+&lt;p&gt;Big kudos should go to the guys with whom I worked there!&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Automatically detects tests plans that are placed in &lt;code class=&quot;highlighter-rouge&quot;&gt;tests&lt;/code&gt; directory and run all of them.&lt;/li&gt;
+  &lt;li&gt;Uses tools shipped with Jmeter (&lt;strong&gt;CMDRunner&lt;/strong&gt; and &lt;strong&gt;Xalan&lt;/strong&gt;) to parse results, prepare them in tabular form and generate graphs.&lt;/li&gt;
+  &lt;li&gt;Different types of reports can be added, removed and configured in the script.&lt;/li&gt;
+  &lt;li&gt;Creates HTML report for all tests scripts that has been run&lt;/li&gt;
+  &lt;li&gt;Displays collapsible images with performance metrics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There’s also a link to ‘Summary report’ which is produced by separate process but is not included here at the moment.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo&quot;&gt;Demo&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Working Example&lt;/strong&gt; of report for 2 test plans and 4 types of charts can be viewed 
+&lt;a href=&quot;https://rawgit.com/michalsi/jmeter-reports/master/results/results.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code is placed in &lt;a href=&quot;https://github.com/michalsi/jmeter-reports&quot;&gt;jmeter-reports&lt;/a&gt; repository&lt;/p&gt;
+
+&lt;h2 id=&quot;execution&quot;&gt;Execution&lt;/h2&gt;
+
+&lt;p&gt;Just run &lt;code class=&quot;highlighter-rouge&quot;&gt;runner.sh&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;Output is generated in &lt;code class=&quot;highlighter-rouge&quot;&gt;results&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;Jmeter jmeter.save.saveservice.output_format=xml&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 25 May 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/test-automation/2016/05/25/script-to-run-jmeter-test-plans-and-format-html-rapport.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/test-automation/2016/05/25/script-to-run-jmeter-test-plans-and-format-html-rapport.html</guid>
+        
+        <category>jmeter</category>
+        
+        <category>test-rapport</category>
+        
+        
+        <category>test-automation</category>
+        
+      </item>
+    
+      <item>
+        <title>Running Java JUnit tests with SBT</title>
+        <description>&lt;p&gt;This is sample configuration to run JUnit tests with &lt;a href=&quot;http://www.scala-sbt.org/&quot;&gt;SBT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;built.sbt&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Project name (artifact name in Maven)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; System Tests&quot;&lt;/span&gt;
+	
+&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1.0-SNAPSHOT&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; System test project&quot;&lt;/span&gt;
+	
+&lt;span class=&quot;c1&quot;&gt;// This forbids including Scala related libraries into the dependency
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autoScalaLibrary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+	
+&lt;span class=&quot;c1&quot;&gt;// http://mvnrepository.com/artifact/junit/junit
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;libraryDependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;junit&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;junit&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;4.12&quot;&lt;/span&gt;
+	
+&lt;span class=&quot;n&quot;&gt;libraryDependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com.novocode&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;junit-interface&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.10&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;
+	
+&lt;span class=&quot;c1&quot;&gt;//docs https://github.com/sbt/junit-interface
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Tests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Argument&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TestFrameworks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;JUnit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;REGEXPS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Important part is to add and configure &lt;a href=&quot;https://github.com/sbt/junit-interface&quot;&gt;junit-interface&lt;/a&gt; which allows us to run junits from sbt.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://xerial.org/blog/2014/03/24/sbt/&quot;&gt;source&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I also use custom script with some configuration parameters to run sbt jar that is uploaded into the project&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384M -jar `dirname $0`/sbt-launch.jar &quot;$@&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and then I can execute clean run of tests&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./sbt clean compile test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here’s &lt;a href=&quot;https://github.com/michalsi/sbt-java-tests&quot;&gt;sample project&lt;/a&gt; whit junit tests and sbt.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 20 May 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/coding/2016/05/20/running-java-junit-tests-with-sbt.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/coding/2016/05/20/running-java-junit-tests-with-sbt.html</guid>
+        
+        <category>sbt</category>
+        
+        <category>junit</category>
         
         
         <category>coding</category>
@@ -97,220 +519,271 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)&lt;/pre&gt;
       </item>
     
       <item>
-        <title>Jmeter - If controller example</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://jmeter.apache.org/usermanual/component_reference.html#If_Controller&quot;&gt;If controller &lt;/a&gt; example to control which request to send based on response of the other sampler.&lt;/p&gt;
-&lt;p&gt;We&#39;re using &lt;a href=&quot;http://jmeter-plugins.org/wiki/DummySampler/&quot;&gt;Dummy Sampler&lt;/a&gt; to generate requests.&lt;/p&gt;
-&lt;p&gt;We also need to extract response&#39;s code. We can use &lt;a href=&quot;http://jmeter.apache.org/usermanual/regular_expressions.html&quot;&gt;Regular Expression Extractor&lt;/a&gt; to get it:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Field to check: Response Code&lt;/li&gt;
-&lt;li&gt;Reference Name: RESPONSE_CODE&lt;/li&gt;
-&lt;li&gt;Regular Expression: (\d+)&lt;/li&gt;
-&lt;li&gt;Template $1$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;First If Controller Condition&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;pre&gt;${RESPONSE_CODE}!=&quot;200&quot;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Second If Controller Condition&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;pre&gt; ${RESPONSE_CODE}==&quot;200&quot;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Setup Dummy Sampler to return code 200.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-180&quot; src=&quot;//assets/dummy-sampler-200.png&quot; alt=&quot;Dummy Sampler - 200&quot; width=&quot;750&quot; height=&quot;356&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-157&quot; src=&quot;//assets/if-controller-yes-condition.png&quot; alt=&quot;if controller - yes condition&quot; width=&quot;636&quot; height=&quot;251&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;And now edit it to return something other than 200&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-181&quot; src=&quot;//assets/dummy-sampler-404.png&quot; alt=&quot;Dummy Sampler - 404&quot; width=&quot;741&quot; height=&quot;387&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-186&quot; src=&quot;//assets/if-controller-result.png&quot; alt=&quot;If Controller result&quot; width=&quot;598&quot; height=&quot;291&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 14 Mar 2016 12:26:04 +0000</pubDate>
-        <link>/test%20automation%20tools/2016/03/14/jmeter-if-controller-example.html</link>
-        <guid isPermaLink="true">//test%20automation%20tools/2016/03/14/jmeter-if-controller-example.html</guid>
-        
-        <category>Jmeter</category>
-        
-        
-        <category>test automation tools</category>
-        
-      </item>
-    
-      <item>
-        <title>Jmeter&#39;s Variables From CSV File - relative path</title>
-        <description>&lt;p&gt;Jmeters &lt;a href=&quot;http://jmeter-plugins.org/wiki/VariablesFromCSV/&quot;&gt;Variables From CSV File&lt;/a&gt; config element set its base directory as a user&#39;s home directory. If you &#39;Browse&#39; your file it will put something like:&lt;/p&gt;
-&lt;pre&gt;/Users/your_user/./your_file.txt&lt;/pre&gt;
-&lt;p&gt;So in such case we need to pass base directory to be able to work with relative paths for our files.&lt;/p&gt;
-&lt;h3&gt;1. Define base directory in User Defined Variables:&lt;/h3&gt;
-&lt;pre&gt;baseDir =&amp;gt;  ${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir())}&lt;/pre&gt;
-&lt;h3&gt;2. Use it in your element:&lt;/h3&gt;
-&lt;pre&gt;${baseDir}/../data/your_data.csv&lt;/pre&gt;
-</description>
-        <pubDate>Thu, 10 Mar 2016 17:09:21 +0000</pubDate>
-        <link>/test%20automation%20tools/2016/03/10/jmeters-variables-from-csv-file-relative-path.html</link>
-        <guid isPermaLink="true">//test%20automation%20tools/2016/03/10/jmeters-variables-from-csv-file-relative-path.html</guid>
-        
-        <category>Jmeter</category>
-        
-        
-        <category>test automation tools</category>
-        
-      </item>
-    
-      <item>
-        <title>Use Jmeter&#39;s base directory</title>
-        <description>&lt;p&gt;You can access these variables &lt;a href=&quot;http://blazemeter.com/blog/queen-jmeters-built-componentshow-use-beanshell&quot; rel=&quot;nofollow&quot;&gt;using Beanshell&lt;/a&gt; as follows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;JMeter&#39;s base dir
-&lt;pre&gt;&lt;code&gt;import org.apache.jmeter.services.FileServer;
+        <title>Comparing two lists in python</title>
+        <description>&lt;p&gt;Often I need to compare two lists to verify common or different values.&lt;/p&gt;
 
-String baseDir = FileServer.getFileServer().getBaseDir();
-vars.put(&quot;baseDir&quot;, baseDir);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;JMeter&#39;s script location (GUI mode)
-&lt;pre&gt;&lt;code&gt;import org.apache.jmeter.gui.GuiPackage;
+&lt;p&gt;With python we can do it pretty quickly&lt;/p&gt;
 
-String testPlanFile = GuiPackage.getInstance().getTestPlanFile();
-vars.put(&quot;testPlanFile&quot;, testPlanFile);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;JMeter&#39;s script name (non-GUI mode)
-&lt;pre&gt;&lt;code&gt;import org.apache.jmeter.services.FileServer;
+&lt;h2 id=&quot;show-the-same-elements-from-lists&quot;&gt;Show the same elements from lists&lt;/h2&gt;
 
-String scriptName = FileServer.getFileServer().getScriptName();
-vars.put(&quot;scriptName&quot;, scriptName); 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+	
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intersection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;If you prefer you can get the same using &lt;a href=&quot;https://jmeter.apache.org/usermanual/functions.html#__BeanShell&quot; rel=&quot;nofollow&quot;&gt;__Beanshell()&lt;/a&gt; function as&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir())}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and it will return current base directory where it is called.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;source: &lt;a href=&quot;http://stackoverflow.com/a/28110434/1037754&quot;&gt;http://stackoverflow.com/a/28110434/1037754&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 09 Mar 2016 12:06:50 +0000</pubDate>
-        <link>/test%20automation%20tools/2016/03/09/use-jmeters-base-directory.html</link>
-        <guid isPermaLink="true">//test%20automation%20tools/2016/03/09/use-jmeters-base-directory.html</guid>
-        
-        <category>Jmeter</category>
-        
-        
-        <category>test automation tools</category>
-        
-      </item>
-    
-      <item>
-        <title>Unix quotes, regural expressions and sed</title>
-        <description>&lt;p&gt;Good tutorial for unix scripting&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;UNIX SHELL Quote Tutorial&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;http://www.grymoire.com/Unix/Quote.html&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Regular Expressions&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;http://www.grymoire.com/Unix/Regular.html&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Sed - An Introduction and Tutorial&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;http://www.grymoire.com/Unix/Sed.html&lt;/p&gt;
-</description>
-        <pubDate>Fri, 03 Apr 2015 14:08:51 +0100</pubDate>
-        <link>/environment/2015/04/03/unix-quotes-and-sed.html</link>
-        <guid isPermaLink="true">//environment/2015/04/03/unix-quotes-and-sed.html</guid>
-        
-        <category>Linux</category>
-        
-        
-        <category>environment</category>
-        
-      </item>
-    
-      <item>
-        <title>How to mount Win partition on Ubuntu</title>
-        <description>&lt;p&gt;This guide has worked for me:&lt;/p&gt;
-&lt;p&gt;https://help.ubuntu.com/community/MountingWindowsPartitions&lt;/p&gt;
-&lt;p&gt;Particularly this section:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://help.ubuntu.com/community/MountingWindowsPartitions#Manual_Configuration&quot;&gt;https://help.ubuntu.com/community/MountingWindowsPartitions#Manual_Configuration&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 25 Dec 2012 13:32:40 +0000</pubDate>
-        <link>/2012/12/25/how-to-mount-win-partition-on-ubuntu.html</link>
-        <guid isPermaLink="true">//2012/12/25/how-to-mount-win-partition-on-ubuntu.html</guid>
-        
-        <category>Ubuntu</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Presentation in HTML5</title>
-        <description>&lt;p&gt;Here&#39;s a link to a Ben Brton&#39;s github page where he has i.a. his presentation in HTML5&lt;/p&gt;
-&lt;p&gt;https://github.com/benburton/presentations&lt;/p&gt;
-</description>
-        <pubDate>Tue, 04 Dec 2012 12:47:15 +0000</pubDate>
-        <link>/2012/12/04/presentation-in-html5.html</link>
-        <guid isPermaLink="true">//2012/12/04/presentation-in-html5.html</guid>
-        
-        <category>html</category>
-        
-        <category>presentation</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Ubuntu Linux Start / Restart / Stop Apache Web Server</title>
-        <description>&lt;p&gt;/etc/init.d/apache2 is service script used to start / stop / restart the Apache2 service under Debian or Ubuntu Linux. You need to login as root or use sudo command restart Apache.&lt;/p&gt;
-&lt;h2&gt;Task: Start Apache 2 Server&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;# /etc/init.d/apache2 start&lt;/code&gt;&lt;br /&gt;
-or&lt;br /&gt;
-&lt;code&gt;$ sudo /etc/init.d/apache2 start&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Task: Restart Apache 2 Server&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;# /etc/init.d/apache2 restart&lt;/code&gt;&lt;br /&gt;
-or&lt;br /&gt;
-&lt;code&gt;$ sudo /etc/init.d/apache2 restart&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Task: Stop Apache 2 Server&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;# /etc/init.d/apache2 stop&lt;/code&gt;&lt;br /&gt;
-or&lt;br /&gt;
-&lt;code&gt;$ sudo /etc/init.d/apache2 stop&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;[source language=&quot;:&amp;lt;a&quot;][/source]&lt;/p&gt;
-&lt;p&gt;The usual location for Debian-like systems (ubuntu) is to place webfiles under the /var/www/... branch of dirs. That is also the location where apache would look (at least you find it in many example apache config files).&lt;br /&gt;
-So you could build dirs like that:&lt;/p&gt;
-&lt;p&gt;/var/www/example.com&lt;br /&gt;
-/var/www/sub1.example.com&lt;br /&gt;
-/var/www/sub2.example.com&lt;br /&gt;
-etc.&lt;/p&gt;
-&lt;p&gt;You may see such statement:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;„Could not reliably determine the server’s fully qualified domain name, using 127.0.1.1 for ServerName”&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;To fix that problem, you need to edit the httpd.conf file. Open the terminal and type,&lt;/p&gt;
-&lt;div&gt;
-&lt;div&gt;sudo gedit /etc/apache2/httpd.conf&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;By default httpd.conf file will be blank. Now, simply add the following line to the file.&lt;/p&gt;
-&lt;div&gt;
-&lt;div&gt;ServerName localhost&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set([2, 3, 5])
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Save the file and exit from gEdit. Finally restart the server.&lt;/p&gt;
-&lt;div&gt;
-&lt;div&gt;sudo /etc/init.d/apache2 restart&lt;/div&gt;
+
+&lt;h2 id=&quot;show-differences-in-lists&quot;&gt;Show differences in lists&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+	
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;difference&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set([1, 4])
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Tue, 20 Nov 2012 19:58:48 +0000</pubDate>
-        <link>/2012/11/20/ubuntu-linux-start-restart-stop-apache-web-server.html</link>
-        <guid isPermaLink="true">//2012/11/20/ubuntu-linux-start-restart-stop-apache-web-server.html</guid>
+        <pubDate>Wed, 18 May 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/coding/2016/05/18/comparing-two-lists-in-python.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/coding/2016/05/18/comparing-two-lists-in-python.html</guid>
         
+        <category>python</category>
+        
+        
+        <category>coding</category>
         
       </item>
     
       <item>
-        <title>How to check what libs are installed</title>
-        <description>&lt;p&gt;pip freeze&lt;/p&gt;
+        <title>Working with files in python</title>
+        <description>&lt;p&gt;In many cases we need to read from or write to a file. Python has simple mechanisms that we can use for that purpose.&lt;/p&gt;
+
+&lt;h2 id=&quot;delete-file-and-create-new-one-with-initiall-text&quot;&gt;Delete file and create new one with initiall text&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prepareOutputFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;	
+	&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;myfile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;UserID,BusinessID&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;append-text-to-a-file&quot;&gt;Append text to a file&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;writeOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;myfile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;## Open file and process line by line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# skip header&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;stripping-the-newline-character&quot;&gt;Stripping the newline character:&lt;/h3&gt;
+
+&lt;p&gt;read a file line by line into a list&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;usersList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rstrip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputUsersFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
-        <pubDate>Sun, 18 Nov 2012 18:00:40 +0000</pubDate>
-        <link>/2012/11/18/how-to-check-what-libs-are-installed.html</link>
-        <guid isPermaLink="true">//2012/11/18/how-to-check-what-libs-are-installed.html</guid>
+        <pubDate>Fri, 06 May 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/coding/2016/05/06/working-with-files-in-python.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/coding/2016/05/06/working-with-files-in-python.html</guid>
         
-        <category>Ubuntu</category>
+        <category>python</category>
         
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Basic requests with curl</title>
+        <description>&lt;p&gt;&lt;em&gt;“Curl is a tool to transfer data from or to a server, using one of the supported protocols”.&lt;/em&gt; For me it’s sometimes the best solution to send requests from terminal. Especially that you can directly copy created curl request generated in developer tools in chrome or firefox.&lt;/p&gt;
+
+&lt;p&gt;The format:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl [options] [URL...]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Example of simple POST request with json payolad and some headers needed:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+	curl -X POST -d &quot;[{&quot;organisationId&quot;: 203040,&quot;type&quot;: &quot;Change&quot;,&quot;dateCreated&quot;: 1459944707610}]&quot;
+	 -H &quot;Content-type: application/json&quot;
+	 -H &quot;Accept: application/json&quot; &quot;localhost:1234/your/url/here&quot;
+&lt;/code&gt;
+Check if you don’t need to escape quotes from your data string e.g.:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\&quot;organisationId\&quot;: 20526,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;options-that-i-often-use&quot;&gt;Options that I often use&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;From &lt;a href=&quot;https://curl.haxx.se/docs/manpage.html&quot;&gt;man page&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-d, --data &amp;lt;data&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sends the specified data in a POST request to the HTTP server&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-H, --header &amp;lt;header&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Extra header to include in the request when sending HTTP to a server.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-X, --request &amp;lt;command&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Specifies a custom request method to use when communicating with the HTTP server. The specified request method will be used instead of the method otherwise used (which defaults to GET). Common additional HTTP requests include PUT and DELETE&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Apr 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/web-tools/2016/04/25/curl-basic-request.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/web-tools/2016/04/25/curl-basic-request.html</guid>
+        
+        <category>curl</category>
+        
+        
+        <category>web-tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Linux - working with files remotley</title>
+        <description>&lt;p&gt;We can use &lt;code class=&quot;highlighter-rouge&quot;&gt;scp&lt;/code&gt; command to directly coppy files from remote server. Assuming that you have  ssh config set up on your local machine.&lt;/p&gt;
+
+&lt;p&gt;To copy file from remote server to your local directory:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp [remote host]:/path/to/file/on/the/server/log.txt .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;log-into-remote-server-and-execute-commands&quot;&gt;Log into remote server and execute commands&lt;/h2&gt;
+
+&lt;h3 id=&quot;running-a-command-on-a-remote-linux-server&quot;&gt;Running a Command on a Remote Linux Server&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh [user]@[server] &#39;[command]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;running-multiply-commands-over-ssh&quot;&gt;Running Multiply Commands over SSH&lt;/h3&gt;
+
+&lt;h4 id=&quot;with-semicollons-as-separators&quot;&gt;with semicollons as separators&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh [user]@[server] &#39;[command 1]; [command 2]; [command 3]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;with-pipes-as-separators&quot;&gt;with pipes as separators&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh [user]@[server] &#39;[command 1] | [command 2] | [command 3]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;with-redirection-of-multiple-lines&quot;&gt;with redirection of multiple lines&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh [user]@[server] &amp;lt;&amp;lt; EOF
+command 1
+command 2
+command 3
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;to get it working I had to add &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh -t -t&lt;/code&gt; to force pseudo-tty allocation even if stdin isn’t a terminal.&lt;/p&gt;
+
+&lt;p&gt;and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt; &#39;EOF&#39;&lt;/code&gt; to prevent the body of the here document being expanded by the (local) shell&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -t -t &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;server] &lt;span class=&quot;sh&quot;&gt;&amp;lt;&amp;lt; &#39;EOF&#39;
+	ls
+	exit
+EOF
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/linux/2016/04/15/linux-working-with-file-remotley.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/linux/2016/04/15/linux-working-with-file-remotley.html</guid>
+        
+        <category>scp</category>
+        
+        <category>ssh</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Managing java versions on mac</title>
+        <description>&lt;p&gt;Today I was strugling with java verions on my machine. After some time I realised that I had this problem before. Finally I was able to digg out sollution but that means that I need to save it here for myself fo the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;jenv&quot;&gt;Jenv&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jenv.be/&quot;&gt;jenv&lt;/a&gt; is a small tool that can manage all java environment settings for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;List managed JDKs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jenv versions
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;system
+oracle64-1.6.0.39
+* oracle64-1.7.0.11 (set by /Users/user/.jenv/version)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Configure global version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jenv global oracle64-1.6.0.39
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Configure local version (per directory)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jenv local oracle64-1.6.0.39
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Configure shell instance version&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jenv shell oracle64-1.6.0.39
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 13 Apr 2016 21:09:24 +0100</pubDate>
+        <link>http://michalsi.github.io/osx/2016/04/13/managing-java-verisons-on-mac.html</link>
+        <guid isPermaLink="true">http://michalsi.github.io/osx/2016/04/13/managing-java-verisons-on-mac.html</guid>
+        
+        <category>java</category>
+        
+        
+        <category>osx</category>
         
       </item>
     

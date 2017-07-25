@@ -34,3 +34,6 @@ Source code is placed in [jmeter-reports](https://github.com/michalsi/jmeter-rep
 Just run `runner.sh` from `scripts` directory.
 
 Output is generated in `results` directory.
+
+Jmeter jmeter.save.saveservice.output_format=xml
+

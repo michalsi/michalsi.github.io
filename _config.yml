@@ -1,57 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: Michal's notes
+title: My private public notes
+email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  My privte public notes
-baseurl: "/" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site you most probably don't need to set it
+  Notes on software engineering including testing tools and frameworks,
+  code snippets and other stuff
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://michalsi.github.io" # the base hostname & protocol for your site
+
+github_username:  michalsi
+
+gems: [jekyll-paginate]
+
+paginate: 5
+paginate_path: "/page-:num/"
 
 # Build settings
 markdown: kramdown
-
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
-
-paginate: 5 # pagination based on number of posts
-paginate_path: "page/:num"
-highlighter: rouge
-gems: [jekyll-paginate]
-
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
-
-# comments
-disqus: # add disqus shortname here
-
-# author info
-# add your appropriate info here
-author: Michal
-bio:    # your bio
-email:
-email_md5: # md5 hash of your email
-twitter_username:
-github_username: michalsi
-
-# Theming options
-# These settings are mandatory.
-theme:              'blue-pink'
-# drawer theming
-drawer:
-  text_color:       'grey-600'
-  header_color:     'blue-500'
-  navigation_color: 'grey-200'
-# footer theming
-footer:
-  text_color: 'blue-grey-200'
-  color: 'blue-grey-600'
