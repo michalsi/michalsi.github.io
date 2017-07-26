@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " Working with Jekyll - switch to 'minima' theme"
+title:  "Working with json path"
 date:   2017-07-19 19:37:59 +0100
 categories: blog
 tags: jekyll
