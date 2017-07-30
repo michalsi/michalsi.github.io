@@ -13,7 +13,7 @@ I decided to look for something new.
  
 After a while I've forgot the 'working flow' with Jekyll so it means that I should write it down here.
 
-##Start a new blog.
+## Start a new blog.
 
 	jekyll new michalsi.github.io
 
