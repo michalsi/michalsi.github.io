@@ -1,19 +1,33 @@
 ---
 layout: post
-title:  "Working with json path"
-date:   2017-07-19 19:37:59 +0100
-categories: blog
-tags: jekyll
+title:  "JMeter - working with JsonPath"
+date:   2017-07-26 19:37:59 +0100
+categories: performance-tests
+tags: jmeter jsonpath
 ---
 
-## Filter specificJson node with JsonPath
+## JSON Path Extractor
 
-Get all `Events' that has specific corelation client id and then get one with specific name. Then get case id which is included in that event.
+JMeter provides [JSON Path Extractor](https://jmeter-plugins.org/wiki/JSONPathExtractor/)
+component which extracts nodes from JSON response with JsonPath.
 
-	$.events[?(@._metadata.correlation.client=="445ceccf-34bb-470f-a345-8be3f4e3ff2f" && @._metadata.name=="public.resulting.case-to-be-resulted-assigned")].caseId
+### Filter specific JSON node with JsonPath
+
+To filter nodes we need to use `?()`.
+ 
+`@` defines current object/element.
+
+#### Example
+
+Get all `Events` that has specific `correlation.client` id and then get one with specific name.
+
+Then get `caseId` which is included in that event.
+
+	$.events[?(@._metadata.correlation.client=="445ceccf-34bb-470f-a345-8be3f4e3ff2f"
+	 && @._metadata.name=="public.resulting.case-to-be-resulted-assigned")].caseId
 
 
-Jason that we want to process:
+Json that needs to be processed:
 
 	{  
 	   "events":[  
@@ -25,7 +39,6 @@ Jason that we want to process:
 	            "context":{  
 	               "user":"a085e359-6069-4694-8820-000000000000"
 	            },
-	            "createdAt":"2017-07-25T16:25:33.451Z",
 	            "stream":{  
 	               "id":"19151ca7-d755-4005-b76c-483309475c39",
 	               "version":1
@@ -34,8 +47,6 @@ Jason that we want to process:
 	            "name":"assignment.assignment-created",
 	            "causation":[  
 	               "c925e708-c61b-4039-b1ea-0c33f233619a",
-	               "73d65967-8356-4862-a2b7-6034eb4899de",
-	               "99fb836d-f9b2-4d0c-96cb-711cc0626dbb",
 	               "10d9b7ad-3b8a-4425-8b41-ab69492a8880"
 	            ]
 	         },
@@ -52,7 +63,6 @@ Jason that we want to process:
 	            "context":{  
 	               "user":"a085e359-6069-4694-8820-000000000000"
 	            },
-	            "createdAt":"2017-07-25T16:25:33.395Z",
 	            "id":"d809e397-5e9e-4ccb-b479-cb716d4cfeb9",
 	            "name":"public.resulting.case-to-be-resulted-assigned",
 	            "causation":[  
@@ -71,7 +81,6 @@ Jason that we want to process:
 	            "context":{  
 	               "user":"a085e359-6069-4694-8820-000000000000"
 	            },
-	            "createdAt":"2017-07-25T16:18:48.855Z",
 	            "id":"ce7553f3-3567-4970-88df-ed160cfd1de5",
 	            "name":"public.resulting.case-not-assigned",
 	            "causation":[  
@@ -88,15 +97,8 @@ Jason that we want to process:
 	            "context":{  
 	               "user":"a085e359-6069-4694-8820-000000000000"
 	            },
-	            "createdAt":"2017-07-25T16:18:47.257Z",
 	            "id":"906d09ba-a7cd-4a06-ad77-ae5f5df576da",
-	            "name":"public.resulting.referenced-decisions-saved",
-	            "causation":[  
-	               "01239bb3-c2c1-4cb8-bf59-33319aa90df4",
-	               "eebd0c48-08e5-41b0-81d3-ec05f64fdfad",
-	               "f4492757-2cc1-4581-93d6-e99cbbab0a31",
-	               "c1abe256-2a53-429b-8dc3-04f3a4aa1db4"
-	            ]
+	            "name":"public.resulting.referenced-decisions-saved"
 	         },
 	         "resultedOn":"2017-07-25T16:18:47.175Z",
 	         "caseId":"ed43c50c-db14-44d5-80d8-dacb569e4572"
@@ -104,7 +106,7 @@ Jason that we want to process:
 	   ]
 	}
 
-## Some links
+## Some tutorials
 JsonPath [on github](https://github.com/json-path/JsonPath)
 
 Quick [tutorial](http://goessner.net/articles/JsonPath/)
@@ -113,6 +115,4 @@ Quick [tutorial](http://goessner.net/articles/JsonPath/)
 
 ## JSONPath Online Evaluator
 
-Usefull validator of your json paths:
-
-http://jsonpath.com/?
+Test your json path expressions online with [jsonquerytool.com](http://www.jsonquerytool.com/)

@@ -2,7 +2,7 @@
 layout: post
 title:  "Jmeters Variables From CSV File - relative path"
 date:   2016-03-10 21:09:24 +0100
-categories: test-automation
+categories: performance-tests
 tags: jmeter
 ---
 

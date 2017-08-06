@@ -2,7 +2,7 @@
 layout: post
 title:  "Jmeter IF controller - example"
 date:   2016-03-14 21:09:24 +0100
-categories: test-automation
+categories: performance-tests
 tags: jmeter
 ---
 

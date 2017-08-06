@@ -2,7 +2,7 @@
 layout: post
 title:  "Script to run Jmeter test plans and format HTML rapport"
 date:   2016-05-25 21:09:24 +0100
-categories: test-automation
+categories: performance-tests
 tags: jmeter test-rapport
 ---
 ### Description 

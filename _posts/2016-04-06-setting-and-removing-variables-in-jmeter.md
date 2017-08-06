@@ -2,7 +2,7 @@
 layout: post
 title:  "Setting and removing variables in Jmeter"
 date:   2016-04-06 21:09:24 +0100
-categories: test-automation
+categories: performance-tests
 tags: jmeter java-script
 ---
 

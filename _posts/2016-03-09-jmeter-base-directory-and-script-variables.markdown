@@ -2,7 +2,7 @@
 layout: post
 title:  "Jmeter base directory and script variables"
 date:   2016-03-09 12:09:24 +0100
-categories: test-automation
+categories: performance-tests
 tags: jmeter
 ---
 
