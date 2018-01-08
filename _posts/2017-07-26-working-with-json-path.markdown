@@ -10,6 +10,11 @@ tags: jmeter jsonpath
 
 JMeter provides [JSON Path Extractor](https://jmeter-plugins.org/wiki/JSONPathExtractor/)
 component which extracts nodes from JSON response with JsonPath.
+Filetering can be done with `$..element[?(@.atribute)]`
+
+Let's look at the example.
+
+Get all `Events' that has specific corelation client id and then get one with specific name. Then get caseId which is included in that event.
 
 ### Filter specific JSON node with JsonPath
 
@@ -64,11 +69,7 @@ Json that needs to be processed:
 	               "user":"a085e359-6069-4694-8820-000000000000"
 	            },
 	            "id":"d809e397-5e9e-4ccb-b479-cb716d4cfeb9",
-	            "name":"public.resulting.case-to-be-resulted-assigned",
-	            "causation":[  
-	               "c925e708-c61b-4039-b1ea-0c33f233619a",
-	               "4092ecc5-bb95-46b8-ba40-f8027dc872c4"
-	            ]
+	            "name":"public.resulting.case-to-be-resulted-assigned"
 	         },
 	         "caseId":"19151ca7-d755-4005-b76c-483309475c39",
 	         "assignedAt":"2017-07-25T16:25:33.203Z"
@@ -82,11 +83,7 @@ Json that needs to be processed:
 	               "user":"a085e359-6069-4694-8820-000000000000"
 	            },
 	            "id":"ce7553f3-3567-4970-88df-ed160cfd1de5",
-	            "name":"public.resulting.case-not-assigned",
-	            "causation":[  
-	               "e0114098-477e-4a43-be2e-faeaefb51383",
-	               "09672b1b-13c8-47be-9aad-2bdffec3cc36"
-	            ]
+	            "name":"public.resulting.case-not-assigned"
 	         }
 	      },
 	      {  
