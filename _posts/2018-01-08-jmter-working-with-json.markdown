@@ -44,3 +44,22 @@ log.info(JSON.stringify(personObj));
 
 vars.put("updatedPersonalDetails", JSON.stringify(personObj) );
 ```
+
+
+Some basic example of using Groovy to do JSON manipulation:
+
+```groovy
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+
+String personInfo = vars.get("personInfo");
+
+def slurped = new JsonSlurper().parseText(personInfo);
+def builder = new JsonBuilder(slurped);
+
+builder.content.pet = 'cat';
+
+log.info( builder.toPrettyString());
+
+vars.put("updatedPersonalDetails", builder.toPrettyString());
+```
