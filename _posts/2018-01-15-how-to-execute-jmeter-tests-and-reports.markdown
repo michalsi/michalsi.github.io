@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to execute JMeter tests andreports"
+title:  "How to execute JMeter tests and reports"
 date:   2018-01-15 19:37:59 +0100
 categories: performance-tests
 tags: jmeter maven
