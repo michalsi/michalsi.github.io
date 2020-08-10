@@ -6,18 +6,24 @@ categories: blog
 tags: jekyll
 ---
 
-After a while of being busy with other stuff I wanted to get back to my notes kept on github pages. First thing I wanted to do was cleanup and fixes. I got advise from github about officially supported themes and the one which I used wasn't on that list.
+After a while of being busy with other stuff I wanted to get back to my notes kept on github pages. First thing I wanted to do was make some cleanup and fixes. I got advise from github about officially supported themes and the one which I used wasn't on that list.
 I decided to look for something new. 
 
-## Basic commands 
- 
-After a while I've forgot the 'working flow' with Jekyll so it means that I should write it down here.
+## Installation on mac
+Make sure you've got `ruby` set up. E.g. type `ruby -v`
+
+Install jekyll:
+`gem install --user-install bundler jekyll`
+
+Go to [official docs](https://jekyllrb.com/docs/installation/macos/) for details.
+
 
 ## Start a new blog.
 
 	jekyll new michalsi.github.io
 
-It will have default [minima](https://github.com/jekyll/minima) theme installed. It suited well my most needs for clean and clear theme. With *just a few tweaks* it should preserve all of my blog's functionalities and give it a fresh look.
+It will have default [minima](https://github.com/jekyll/minima) theme installed. It suited well most of my needs for a clean and clear theme.
+ With *just a few tweaks* it should preserve all of my blog's functionalities and give it a fresh look.
 
 ## Run Jekyll server
 This command will watch for changes automatically.	
