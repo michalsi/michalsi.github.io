@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi there, I’m Michał (pronunciation is close to: `MEE-how`)
+Hi there, I’m Michał *(pronunciation is close to: `MEE-how`)*
  
 I’m a software engineer currently working Quality Engineer in [Spartez](https://spartez.com/).
 
