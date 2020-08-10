@@ -4,13 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Hi there, I’m Michal
+Hi there, I’m Michał (pronunciation is close to: `MEE-how`)
  
-I’m a software test engineer currently working in [Kainos](https://kainos.com/).
+I’m a software engineer currently working Quality Engineer in [Spartez](https://spartez.com/).
 
-This is yet another place in the internet with various software engineering stuff.
+On this site I tend to keep things that I've been working on worked on. My main intention is to to save it for myself for the future.
+But I hope some of it might be of use for someone else as well.
 
-I try to write about things that I've worked on to save it for the future for myself.
-I hope you will find it useful as well.
-
-Views presented here are my own.
+Enjoy!
