@@ -4,11 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Hi there, I’m Michał *(pronunciation is close to: `MEE-how`)*
+Hi there, I’m Michał *(pronunciation is close to: `Mee-how`)*
  
-I’m a software engineer currently working in [Spartez](https://spartez.com/).
+I’m a software engineer currently working in [Atlassian](https://www.atlassian.com/) in Gdańsk.
 
-On this site I tend to keep things that I've been working on worked on. My main intention is to to save it for myself for the future.
-But I hope some of it might be of use for someone else as well.
+On this site I tend to keep things that I've been working on.
 
 Enjoy!
